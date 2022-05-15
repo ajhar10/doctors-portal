@@ -1,11 +1,10 @@
 import React from 'react';
-import PrimaryButton from '../Shared/PrimaryButton';
 
 const Service = ({ service, setTreatment }) => {
     return (
         <div class="card lg:max-w-lg shadow-xl">
-            <div class="card-body">
-                <h2 class="card-title">{service.name}</h2>
+            <div class="card-body text-center">
+                <h2 class="text-2xl text-secondary">{service.name}</h2>
                 <p>{
                     service.slots.length > 0 ?
                         <span>{service.slots[0]}</span>
@@ -17,7 +16,7 @@ const Service = ({ service, setTreatment }) => {
                     <label
                         onClick={() => setTreatment(service)}
                         for="booking-modal"
-                        class="btn text-white font-bold btn-primary bg-gradient-to-r from-secondary to-primary"
+                        class="btn text-white font-bold btn-sm btn-primary bg-gradient-to-r from-secondary to-primary"
                         disabled={service.slots.length === 0}>
                         Booking Appoinment
                     </label>
